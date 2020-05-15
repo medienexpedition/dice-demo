@@ -54,7 +54,7 @@ function rolldice() {
         return;
     }
     turn++;
-    document.getElementById("roll-button").innerHTML = "Roll Dice (" + (turn + 1) + ")";
+    document.getElementById("roll-button").innerHTML = "Roll Dice (" + (3 - turn) + " left)";
     console.log(dicevalues);
     for (i = 0; i < dice.length; i++) {
         if (selected.indexOf(dice[i]) == -1) {
@@ -89,9 +89,9 @@ function score() {
     console.log("sortedvalues: " + sortedvalues);
     console.log("kniffle? " + sortedvalues);
     if (sortedvalues[0] == sortedvalues[4]) {
-        console.log("KNIFFLE in round " + turn + "!");
+        console.log("KNIFFLE!");
         for (i = 0; i < 5; i++) {
-            dice[i].style.color = "#ff0000";
+            dice[i].style.color = "#0000ff";
         }
     } else {
         console.log("No KNIFFLE.");
