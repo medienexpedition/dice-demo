@@ -84,6 +84,10 @@ function roll(die) {
 
 function score() {
     document.getElementById("roll-button").innerHTML = "New game";
+    for (i = 0; i < 5; i++) {
+        console.log(dice[i].style.color);
+        if (dice[i].style.color == "rgb(0, 0, 0)") dice[i].style.color = "#ddd";
+    }
     var sortedvalues = dicevalues.slice();
     sortedvalues.sort((a, b) => a - b);
     console.log("sortedvalues: " + sortedvalues);
