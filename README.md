@@ -1,3 +1,0 @@
-# kniffle
-
-Simple kniffel game
